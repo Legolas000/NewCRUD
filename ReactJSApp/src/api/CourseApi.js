@@ -19,7 +19,7 @@ class CourseApi {
     static getAllCourses() {
         return new Promise((resolve) => {
             setTimeout(() => {
-                fetch(`http://localhost:5000/courses`)
+                fetch(`http://ec2-18-188-117-12.us-east-2.compute.amazonaws.com:5000/courses`)
                 .then(result=>resolve(result.json()))
             }, delay);
 
@@ -46,7 +46,7 @@ class CourseApi {
                     courses.push(course);
                 }
 
-                fetch("http://localhost:5000/courses",
+                fetch("http://ec2-18-188-117-12.us-east-2.compute.amazonaws.com:5000/courses",
                 {
                     method: 'post',
                     headers: {
@@ -64,7 +64,7 @@ class CourseApi {
     static deleteCourse(courseId) {
         return new Promise((resolve) => {
             setTimeout(() => {
-                fetch("http://localhost:5000/courses/" + courseId,
+                fetch("http://ec2-18-188-117-12.us-east-2.compute.amazonaws.com:5000/courses/" + courseId,
                 {
                     method: "DELETE"
                 })
@@ -77,7 +77,7 @@ class CourseApi {
     static getCourse(courseId) {
         return new Promise((resolve) => {
             setTimeout(() => {
-                fetch(`http://localhost:5000/courses/`+courseId)
+                fetch(`http://ec2-18-188-117-12.us-east-2.compute.amazonaws.com:5000/courses/`+courseId)
                 .then(result=>resolve(result.json()))
 
             }, delay);
