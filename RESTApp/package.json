@@ -9,7 +9,7 @@
     "consolidate": "0.5.x",
     "express": "3.x",
     "handlebars": "1.0.x",
-    "mongoose": "3.x"
+    "mongoose": "5.x"
   },
   "engines": {
     "node": "0.10.x",
